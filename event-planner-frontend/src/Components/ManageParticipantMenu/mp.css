@@ -1,0 +1,33 @@
+.participantPopUp{
+    border:1px solid #ddd;
+    width: 200px;
+    margin: 10px;
+    display: none;
+    position: absolute;
+    top:35px;
+    right: 15px;
+    box-shadow: -2px 1px 6px 0px rgba(0,0,0,0.5);
+}
+.participantPopUp > button{
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+    border:none;
+    background-color: white;
+    transition: 0.25s ease;
+    color: #707070;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+    z-index: 200;
+}
+.participantPopUp > button:last-of-type{
+    border-bottom:none;
+}
+.participantPopUp.show{
+    display: block;
+}
+.participantPopUp > button:hover{
+    background-color: #e5e5e5;
+    color: rgb(44, 44, 44);
+}

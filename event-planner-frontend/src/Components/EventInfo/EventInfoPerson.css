@@ -1,0 +1,37 @@
+.eventInfo__person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 20px; */
+  padding: 20px;
+  background-color: white;
+}
+
+.eventInfo__person:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.eventInfo__person__details {
+  display: flex;
+  align-items: center;
+}
+
+.eventInfo__person__details > p {
+  margin-left: 20px;
+  font-size: 14px;
+  /* letter-spacing: 1px; */
+  font-weight: 700;
+  color: #707070;
+}
+
+.eventInfo__person__money {
+  display: flex;
+  align-items: center;
+}
+
+.eventInfo__person__money > p {
+  font-weight: 800;
+  font-size: 15px;
+  color: #16ba1f;
+}

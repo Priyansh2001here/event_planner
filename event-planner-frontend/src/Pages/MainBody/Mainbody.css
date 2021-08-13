@@ -1,0 +1,84 @@
+.mainBody{
+    width: 100%;
+    padding: 16px;
+    /* visibility: 0;
+    opacity: 0;
+    transition: 0.25s ease; */
+}
+/* .mainBody.show{
+    opacity: 1;
+    visibility: 1;
+    transition: 0.25s ease;
+} */
+
+
+.eventsCollectionName{
+    padding-bottom: 12px;
+    color:#1A202C;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.header,.sidebarContainer{
+    background-color: white;
+}
+
+.add1stEvent{
+    width: 300px;
+    height: 180px;
+    border:1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add1stEvent i {
+    font-size: 40px;
+}
+.addFirstEvent{
+    margin-top: 60px;
+}
+.addFirstEvent h3{
+    font-size: 40px;
+    font-weight: normal;
+    color: #707070;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+.addFirstEvent ul{
+    text-align: center;
+    list-style-type: none;
+}
+.addFirstEvent ul li {
+    font-weight: bold;
+}
+.addFirstEvent p {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: #707070;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.plusContainer{
+    background: rgb(21,21, 21); border-radius: 50%; height: 100px; width: 100px; display: flex; justify-content: center; align-items: center;
+}
+.plusContainer i {
+    color: white; font-size: 50px;
+}
+
+@media screen and (max-width:500px) {
+    .addFirstEvent{
+        margin-top: 10px;
+    }
+    .addFirstEvent h3{
+        font-size: 30px;
+    }
+    .addFirstEvent p{
+        width: 320px;
+    }
+}

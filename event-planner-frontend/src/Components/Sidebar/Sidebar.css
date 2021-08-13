@@ -1,0 +1,56 @@
+
+.sidebarContainer {
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    border-right: 1px solid #E2E8F0;
+    top:0px;
+    left: 0px;
+    padding: 24px;
+    z-index: 30;
+    padding-top: 12px;
+}
+.topSidebar{
+    display: flex;
+    align-items: center;
+}
+
+
+.sectionHeading{
+    /* padding-left: 12px; */
+    letter-spacing: 1px;
+    font-size: 16px;
+    color:#A0AEC0;
+    margin-top: 24px;
+}
+.pageLink{
+  margin-top: 8px;
+  text-decoration: none;
+  color: #4b4dbd;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+.pageLink.active {
+  background-color: #eef2ff;
+  border-radius: 10px;
+}
+
+.pageLink p {
+  margin-left: 16px;
+  font-size: 16px;
+}
+
+.sidebarContainer.show{
+    left: -240px;
+}
+
+@media screen and (max-width:900px) {
+    .sidebarContainer{
+        left: -240px;
+        transition: 0.25s ease;
+    }
+    .sidebarContainer.show{
+        left: 0px;
+    }
+}

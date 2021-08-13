@@ -1,0 +1,222 @@
+.eventCard {
+    width: 340px;
+    height: 250px;
+    border:1px solid #bec0c5;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    /* box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+     */
+    /* box-shadow:  -2px 6px 24px -8px rgba(0,0,0,0.52);; */
+
+}
+
+.cardTopSection{
+    height: 35%;
+    border-bottom: 1px solid #bec0c5;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardPhoto {
+    position: absolute;;
+    bottom: -35px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* border: 1px solid #bec0c5; */
+}
+.cardPhoto img{
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.inviteToEventBtn{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    padding: 5px;
+}
+.eventName {
+    color: #3a404b;
+    font-weight: 400px;
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 78%;
+    white-space: nowrap;
+}
+
+.cardBottomSection{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    border-top: 1px solid #bec0c5 ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardBottomSection i{
+    font-size: 17px;
+    color:#3f495a;
+    margin-right: 18px;
+}
+.peopleInEvent{
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+.peopleInEvent img {
+    object-fit: cover;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+}
+.img1 {
+    left: 4px;
+}
+.img2{
+    left:20px;
+}
+.img3{
+    left: 36px;
+}
+.peopleInEvent p {
+    position: absolute;
+    bottom: -12px;
+    color: #707070;
+    font-weight: 700;
+    font-size: 12px;
+    left: 65px;
+    width: 200px;
+}
+
+.eventVenue {
+    margin-top: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 320px;
+    overflow: hidden;
+}
+.eventVenue, .eventDate{
+    color:#707070;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.eventDate i {
+    margin-right: 5px;
+}
+.eventDate i {
+    font-size: 14px;
+}
+.eventVenue i, .adminName i {
+    margin-right: 6px;
+}
+.eventVenue i {
+    margin-left: 1px;
+}
+
+@media screen and (max-width:500px) {
+    .eventCard{
+        max-width: 320px;
+        width: 100%;
+        height: 235px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .eventCard{
+        max-width: 300px;
+        width: 100%;
+        height: 205px;
+    }
+    .cardTopSection{
+        height: 30%;
+    }
+    .cardPhoto{
+        bottom: -28px;
+    }
+    .cardPhoto,.cardPhoto img{
+        width: 56px;
+        height: 56px;
+    }
+    .eventName{
+        font-size: 14px;
+    }
+    .eventVenue{
+        margin-top: 3px;
+    }
+    .eventVenue,.eventDate,.adminName,.eventVenue i,.eventDate i ,.adminName i{
+        font-size: 12px;
+    }
+    
+    .cardBottomSection{
+        height: 40px;
+    }
+    .peopleInEvent img {
+        height: 20px;
+        width: 20px;
+    }
+    .img1 {
+        left: 4px;
+    }
+    .img2{
+        left:15px;
+    }
+    .img3{
+        left: 26px;
+    }
+    .peopleInEvent p{
+        left: 48px;
+        font-size: 11px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .eventCard{
+        max-width: 300px;
+        width: 100%;
+        height: 197px;
+    }
+    .peopleInEvent p {
+        width: 180px;
+    }
+   
+}
+
+@media screen and (max-width:380px) {
+    .eventCard{
+        height: 170px;
+    }
+    .eventVenue,.eventDate,.adminName,.eventVenue i,.eventDate i ,.adminName i{
+        font-size: 10px;
+    }
+    .cardPhoto{
+        bottom: -25px;
+    }
+    .eventVenue{
+        margin-top: 1px;
+    }
+    .cardPhoto,.cardPhoto img{
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+    }
+    .peopleInEvent p{
+        font-size: 10px;
+        width: 150px;
+    }
+}
