@@ -13,3 +13,5 @@ yarn-error.log*
 .npm/
 yarn.lock
 .history/
+.env
+.env.db

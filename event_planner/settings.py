@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,19 +79,30 @@ TEMPLATES = [
 WSGI_APPLICATION = 'event_planner.wsgi.application'
 # ASGI_APPLICATION = "event_planner.asgi.application"
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
-        "USER": os.environ.get("SQL_USER", "postgres"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
-        "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432"),
-    }
+        "NAME": os.environ.get("DEFAULT_SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        "USER": os.environ.get("DEFAULT_SQL_USER", "postgres"),
+        "PASSWORD": os.environ.get("DEFAULT_SQL_PASSWORD", "password"),
+        "HOST": os.environ.get("DEFAULT_SQL_HOST", "localhost"),
+        "PORT": os.environ.get("DEFAULT_SQL_PORT", "5432"),
+    },
+    # "sessions_db": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": os.environ.get("USERS_SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+    #     "USER": os.environ.get("USERS_SQL_USER", "postgres"),
+    #     "PASSWORD": os.environ.get("USERS_SQL_PASSWORD", "password"),
+    #     "HOST": os.environ.get("USERS_SQL_HOST", "localhost"),
+    #     "PORT": os.environ.get("USERS_SQL_PORT", "5432"),
+    # }
 }
+
+
+
+# pprint(DATABASES)
 
 CHANNEL_LAYERS = {
     "default": {
@@ -150,8 +158,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-"""
-http://localhost:8000/static/images/avatar/1.jpg
-http://localhost:8000/static/Wedding.jpeg
-"""
+# DATABASE_ROUTERS = ['routers.db_routers.AuthRouter', 'routers.db_routers.OtherRouter']
