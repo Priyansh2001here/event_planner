@@ -34,16 +34,7 @@ function Login() {
   const userLogin = useSelector(state => state.userLogin);
   const {userInfo} = userLogin;
 
-  const handleCheck = (e) => {
-    setChecked(!Boolean(e.target.value));
-    if (Boolean(e.target.value)) {
-      setEmail('sample@gmail.com');
-      setPassword('sampleacc');
-    } else {
-      setEmail('');
-      setPassword('');
-    }
-  };
+
 
   useEffect(() => {
     if(userInfo){
@@ -78,9 +69,9 @@ function Login() {
     <div className={classes.body}>
       <Container component="main" maxWidth="xs" className={classes.container}>
         <Paper className={classes.paper} elevation={3}>
-          <Avatar className={classes.avatar}>EP</Avatar>
-          <h2>Event Planner</h2>
-          <Typography varient="h4">Lorem ipsum dolor sit.</Typography>
+          <Avatar className={classes.avatar}>E</Avatar>
+          <h2>Evento</h2>
+          <Typography varient="h4">Making events come alive</Typography>
           <form
             className={classes.form}
             onSubmit={handleSubmit}
@@ -112,21 +103,9 @@ function Login() {
                 className={classes.input}
                 value={password}
               />
-              <FormGroup row className={classes.checkbox}>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      onChange={handleCheck}
-                      name="checkedB"
-                      color="primary"
-                      value = {checked}
-                    />
-                  }
-                  label="Login with sample account"
-                />
-              </FormGroup>
+              
             </Grid>
-
+                
             <Button
               type="submit"
               fullWidth
